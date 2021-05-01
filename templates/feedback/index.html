@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<title>Passenger Satisfaction</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'bootstrap_edited.css' %}">
+<link rel="stylesheet"  type="text/css" href="{% static 'bootstrap_4.css' %}">
+<link rel="stylesheet" href="{% static 'fonts/Mallanna.css' %}">
+<!--<link rel="stylesheet"  type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+<!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>-->
+<!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h2,h3,h4,h5,h6 {font-family: "Verdana", Arial, Helvetica, sans-serif}
+img-small {
+  position: fixed; 
+  min-width: 100%;
+}
+</style>
+<head>
+<div class="h1-card" style="border-radius: 2.5rem;">
+  <div class="h1-card-header w3-padding-32" style="text-align: left; background-color: #5c91df; background-image: url(data:image/png;base64,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);"> <!--"background-color: rgb(1, 28, 60); #6287be"-->
+    <h1 class="h1-styles">Passenger Satisfaction</h1>
+  </div>
+</div>
+</head>
+
+<body>
+  <div class="w3-display-container w3-content w3-center " style="max-width:2000px"> <!--add -->
+    <form action="{% url 'home' %}" method="POST">
+      {% csrf_token %}
+      <div class="w3-display-container">
+        <img class="image-class" src="{% static 'images/aeroplane_1.jpg' %}" alt="The Aeroplane" width="100%">
+        <div class="special-row display-top-548">  <!--display-top-548 -->
+          <div class="special-card col-lg-4 display-top-right" style="max-width: 32rem; height: auto;">  <!-- display-top-left-->
+            <div class="special-card-header">
+              <h4 class="special-card-title ">Details</h4>
+            </div><!-- special-card-header-->
+            <div class="special-card-body py-5">  
+                      <div class="form-inline-all-margin">
+                        <label class="w3-margin-right">Id:</label>
+                        <input type="text" class="form-control-inline col-sm-6" name="id">
+                      </div>
+                      <div class="form-inline-all-margin">
+                        <label class="w3-margin-right">Gender:</label>
+                        <select class="form-control-inline col-sm-6" name = "gender">
+                          <option value="Male">Male</option>
+                          <option value="Female">Female</option>
+                        </select>
+                      </div>
+                      <div class="form-inline-all-margin">
+                        <label class="w3-margin-right">Loyality check:</label>
+                        <select class="form-control-inline  col-sm-6" name="customer_type">
+                          <option value="Loyal">Loyal</option>
+                          <option value="Disloyal">Disloyal</option>
+                        </select>
+                      </div>
+                      <div class="form-inline-all-margin">
+                        <label class="w3-margin-right">Age:</label>
+                        <input type="number" class="form-control-inline col-sm-6" name="age">
+                      </div>
+                      <div class="form-inline-all-margin">
+                        <label class="w3-margin-right">Reason for Travel:</label>
+                        <select class="form-control-inline  col-sm-6" name="type_of_travel">
+                          <option value="Personal Travel">Personal Travel</option>
+                          <option value="Business Travel" >Business Travel</option>
+                        </select>
+                      </div>
+                      <div class="form-inline-all-margin">
+                        <label class="w3-margin-right">Type of Travel:</label>
+                        <select class="form-control-inline  col-sm-6" name="class">
+                          <option value="Business">Business</option>
+                          <option value="Eco" >Eco</option>
+                          <option value="Eco Plus" >Eco Plus</option>
+                        </select>
+                      </div>
+                      <div class="form-inline-all-margin">
+                        <label class="w3-margin-right">Flight Distance (in km):</label>
+                        <input type="number" class="form-control-inline col-sm-6" name="flight_distance">
+                      </div>
+            </div><!-- special-card-body-->
+          </div> <!-- for div class="special-card col-lg-4 display-top-left" --> 
+        </div> <!-- for div class="special-row w3-border-1 display-top-548" -->      
+      </div> <!-- for div class="w3-display-container-->
+      <div class="w3-display-container">
+        <img class="image-class " src="{% static 'images/aeroplane_8.jpg' %}" alt="The Aeroplane"  width="100%" border-radius="0.8px">
+        <div class="special-row display-top-848">  <!--display-top-848 -->
+          <div class="special-card col-lg-4 display-left" style="max-width: 32rem; height: auto;"> <!--display-left -->
+            <div class="special-card-header">
+              <h4 class="special-card-title">Your Ratings - I</h4>
+            </div><!-- card-header-->
+            <div class="card-body">  
+                      <div class="form-inline-all-margin">
+                        <label class="w3-margin-right">Inflight wifi service:</label>
+                        <select class="form-control-inline col-sm-6" name="inflight_wifi_service">
+                          <option value="" disabled selected hidden>Select...</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                      </div><!--form-inline-all-margin-->
+                      <div class="form-inline-all-margin">
+                        <label class="w3-margin-right">Time convenience:</label>
+                        <select class="form-control-inline col-sm-6" name="time_convenience">
+                          <option value="" disabled selected hidden>Select...</option>
+                          <option value="1" >1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                      </div><!--form-inline-all-margin-->
+                      <div class="form-inline-all-margin">
+                        <label class="w3-margin-right">Ease of booking:</label>
+                        <select class="form-control-inline col-sm-6" name="ease_of_booking">
+                          <option value="" disabled selected hidden>Select...</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                      </div><!--form-inline-all-margin-->
+                      <div class="form-inline-all-margin">
+                        <label class="w3-margin-right">Gate Location:</label>
+                        <select class="form-control-inline  col-sm-6" name="gate_location">
+                          <option value="" disabled selected hidden>Select...</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                      </div><!--form-inline-all-margin-->
+                      <div class="form-inline-all-margin">
+                        <label class="w3-margin-right">Food and Drink:</label>
+                        <select class="form-control-inline col-sm-6" name="food_and_drink">
+                          <option value="" disabled selected hidden>Select...</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                      </div><!--form-inline-all-margin-->
+                      <div class="form-inline-all-margin">
+                        <label class="w3-margin-right">Online Boarding:</label>
+                        <select class="form-control-inline col-sm-6" name="online_boarding">
+                          <option value="" disabled selected hidden>Select...</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                      </div><!--form-inline-all-margin-->
+                      <div class="form-inline-all-margin">
+                        <label class="w3-margin-right">Seat Comfort:</label>
+                        <select class="form-control-inline  col-sm-6" name="seat_comfort">
+                          <option value="" disabled selected hidden>Select...</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                      </div><!--form-inline-all-margin-->
+                      <div class="form-inline-all-margin">
+                        <label class="w3-margin-right">Inflight entertainment:</label>
+                        <select class="form-control-inline  col-sm-6" name="inflight_entertainment">
+                          <option value="" disabled selected hidden>Select...</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                        </select>
+                      </div><!--form-inline-all-margin-->
+            </div> <!--card-body-->
+          </div><!-- for div class="special-card col-lg-4 display-left" -->
+          <div class="special-card col-lg-4 display-right" style="max-width: 32rem; height: auto;"> <!-- display-right -->
+            <div class="special-card-header">
+              <h4 class="special-card-title">Your Ratings - II</h4>
+            </div><!-- card-header-->
+            <div class="card-body">  
+                <div class="form-inline-all-margin">
+                  <label class="w3-margin-right">On-board service:</label>
+                  <select class="form-control-inline  col-sm-6" name="onboard_service">
+                    <option value="" disabled selected hidden>Select...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div><!--form-inline-all-margin-->
+                <div class="form-inline-all-margin">
+                  <label class="w3-margin-right">Leg Room Service:</label>
+                  <select class="form-control-inline  col-sm-6" name="leg_room_service">
+                    <option value="" disabled selected hidden>Select...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div><!--form-inline-all-margin-->
+                <div class="form-inline-all-margin">
+                  <label class="w3-margin-right">Baggage Handling:</label>
+                  <select class="form-control-inline  col-sm-6" name="baggage_handling">
+                    <option value="" disabled selected hidden>Select...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div><!--form-inline-all-margin-->
+                <div class="form-inline-all-margin">
+                  <label class="w3-margin-right">CheckIn service:</label>
+                  <select class="form-control-inline  col-sm-6" name="checkin_service">
+                    <option value="" disabled selected hidden>Select...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div><!--form-inline-all-margin-->
+                <div class="form-inline-all-margin">
+                  <label class="w3-margin-right">Inflight Service:</label>
+                  <select class="form-control-inline  col-sm-6" name="inflight_service">
+                    <option value="" disabled selected hidden>Select...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div><!--form-inline-all-margin-->
+                <div class="form-inline-all-margin">
+                  <label class="w3-margin-right">Cleanliness:</label>
+                  <select class="form-control-inline col-sm-6" name="cleanliness">
+                    <option value="" disabled selected hidden>Select...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div><!--form-inline-all-margin-->
+                <div class="form-inline-all-margin">
+                  <label class="w3-margin-right">Departure Delay (min):</label>
+                  <select class="form-control-inline  col-sm-6" name="departure_delay">
+                    <option value="" disabled selected hidden>Select...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div><!--form-inline-all-margin-->
+                <div class="form-inline-all-margin">
+                  <label class="w3-margin-right">Arrival Delay(min):</label>
+                  <select class="form-control-inline  col-sm-6" name="arrival_delay">
+                    <option value="" disabled selected hidden>Select...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div><!--form-inline-all-margin-->
+              </div> <!--card-body-->
+          </div><!-- for div class="special-card col-lg-4 display-right" -->
+        </div><!-- for div class="special-row w3-border-1 display-top-848" -->
+      </div> <!-- for div class="w3-display-container-->
+      <button class="btn btn-info-blue btn-xlg w3-padding w3-margin-top" type = "submit">Submit</button>
+    </form> 
+  </div> <!-- onclick = "location.href='' "  for div class="w3-display-container special-content-1 w3-center w3-margin-bottom w3-light-grey" -->
+  <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+          <!-- Modal content-->
+            <div class="modal-content">
+              {% if class_label %}
+                <div class="modal-header green-element">
+                    <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                    <h3 class="modal-title green-element">System Information</h3>
+                </div>
+                
+                <div class="modal-body">
+                    <div class="dev-info">
+                      <p>We are glad to know that you're satisfied with our services!!</p> 
+                      <p> Thank you for choosing us!!!</p><br>
+                      <p><img src="{% static 'gifs/thankyou_milk.gif' %}" alt="Aeroplane" width = "200px"></p>                         
+                    </div>
+                </div>
+
+                <div class="modal-footer green-element">
+                  <button type="button" class="btn btn-info-blue" data-dismiss="modal" href = "{% url 'home' %}" >Close</button>
+                </div>
+                {% else %}
+                  <div class="modal-header red-element">
+                      <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                      <h3 class="modal-title red-element">System Information</h3>
+                  </div>
+                  
+                  <div class="modal-body">
+                      <div class="dev-info">
+                        <p>We are Sorry to know that you're NOT satisfied with our services!!</p> 
+                        <p><img src="{% static 'gifs/sorry_milk.gif' %}" alt="Aeroplane"  width = "200px"></p>                         
+                      </div>
+                  </div>
+
+                  <div class="modal-footer red-element">
+                    <button type="button" class="btn btn-info-blue" data-dismiss="modal">Close</button>
+                  </div>
+                {% endif %}
+            </div>
+      </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  {% if successful_submit %}
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#myModal").modal('show');
+        });
+    </script>
+  {% endif %}
+</body>
+
+
+  
+<!-- End page content -->
+<!-- Footer -->
+  <footer class="footer-card w3-center background-footer">
+    <i class="fa fa-linkedin linkedIn-icon-border w3-xlarge w3-hover-opacity w3-text-blue" style="width:30px"></i>  : <a class = "w3-text-sand" href="https://www.linkedin.com/in/shiva-gandluri-63016416b/" target="_blank">shiva gandluri</a> &ensp; &emsp; &ensp; &emsp; &ensp; <i class="fa fa-envelope w3-large w3-hover-opacity w3-text-amber" style="width:30px"> </i> : <a class = "w3-text-sand" href="mailto:shiva1gandluri@gmail.com" target="_blank">shiva1gandluri@gmail.com</a> 
+  </footer>
+</html>
+
+<!-- 
+  aeroplane_1: https://www.pinterest.com/pin/710724384918324762/
+  aeroplane_8 : https://busycontinent.com/sabre-and-google-develop-industry-first-ai-tech-for-travel-companies/
+ -->
+
