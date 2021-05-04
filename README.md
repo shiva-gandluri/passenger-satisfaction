@@ -1,10 +1,11 @@
 # PASSENGER SATISFACTION
 
+Passenger Satisfaction is a binary classification problem that determines whether a customer is satisfied or not with his/her flight journey, based on 24 different attributes.
 
-Project Intuition: A binary classification problem that determines whether a customer is satisfied or not with his/her flight journey, based on 24 different attributes.
-Technologies Used: Machine Learning, Python
-Framework: Django
-Frontend: Html, CSS, JavaScript and JQuery 
+* **Technologies Used:** Machine Learning, Python
+* **Framework:** Django
+* **Frontend:** Html, CSS, JavaScript and JQuery 
+
 
 Detailed explanation of Machine Learning aspects of this project: [Medium blog](https://shiva1gandluri.medium.com/passenger-satisfaction-f213ec5cc9f7)
 
