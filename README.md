@@ -6,7 +6,7 @@ Technologies Used: Machine Learning, Python
 Framework: Django
 Frontend: Html, CSS, JavaScript and JQuery 
 
-Link to the medium blog: [](https://shiva1gandluri.medium.com/passenger-satisfaction-f213ec5cc9f7)
+Link to the medium blog: [link](https://shiva1gandluri.medium.com/passenger-satisfaction-f213ec5cc9f7)
 
 [![PASSENGER SATISFACTION - PROJECT DEMO](https://img.youtube.com/vi/4v2mJSBRhnY)](https://www.youtube.com/watch?v=4v2mJSBRhnY)
 
