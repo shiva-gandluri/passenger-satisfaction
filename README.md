@@ -109,6 +109,5 @@ passenger-satisfaction
 
 ### Find me
 
-LinkedIn : https://www.linkedin.com/in/shiva-gandluri-63016416b/
-
-Youtube : https://www.youtube.com/channel/UC_vlvekR9zdzK0nG2bXvkKQ
+- LinkedIn : https://www.linkedin.com/in/shiva-gandluri-63016416b/
+- Youtube : https://www.youtube.com/channel/UC_vlvekR9zdzK0nG2bXvkKQ
