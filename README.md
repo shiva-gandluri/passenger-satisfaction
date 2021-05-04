@@ -11,9 +11,9 @@ Detailed explanation of Machine Learning aspects of this project: [Medium blog](
 
 ### Project Demo
 
-*Click on the image below to go to the project demo.*
+ > *Click on the image below to go to the project demo.*
 
-[![PASSENGER SATISFACTION - PROJECT DEMO](static/images/Passenger_Satisfaction_Thumbnail.PNG)](https://www.youtube.com/watch?v=4v2mJSBRhnY)
+ > [![PASSENGER SATISFACTION - PROJECT DEMO](static/images/Passenger_Satisfaction_Thumbnail.PNG)](https://www.youtube.com/watch?v=4v2mJSBRhnY)
 
 ### Table of Contents
 
