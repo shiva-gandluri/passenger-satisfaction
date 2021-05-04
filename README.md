@@ -25,9 +25,9 @@ Detailed explanation of Machine Learning aspects of this project: [Medium blog](
 
 ### Versions
 
-* python : 3.6.5
+* Python : 3.6.5
 * Django : 3.2
-* scikit-learn :  0.19.1
+* Scikit-learn : 0.19.1
 * Bootstrap : 4.0
 
 
