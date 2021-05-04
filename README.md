@@ -9,15 +9,17 @@ Frontend: Html, CSS, JavaScript and JQuery
 Detailed explanation of Machine Learning aspects of this project: [Medium blog](https://shiva1gandluri.medium.com/passenger-satisfaction-f213ec5cc9f7)
 
 ### Project Demo
-Click on the image below to go to the project demo.
+
+*Click on the image below to go to the project demo.*
+
 [![PASSENGER SATISFACTION - PROJECT DEMO](static/images/Passenger_Satisfaction_Thumbnail.PNG)](https://www.youtube.com/watch?v=4v2mJSBRhnY)
 
 ### Table of Contents
 
 * [Versions](#versions)
-* [Quick Start](#quick-start)
-* [Documentation](#documentation)
+* [Terminal Commands](#terminal-commands)
 * [File Structure](#file-structure)
+* [Find me](#find-me)
 
 
 ### Versions
@@ -38,7 +40,7 @@ Click on the image below to go to the project demo.
 5. Run in terminal: ```python ./manage.py runserver```
 6. Navigate to: [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
-## File Structure
+### File Structure
 
 Within the download you'll find the following directories and files:
 
@@ -104,3 +106,7 @@ passenger-satisfaction
 └── passenger_satisfaction-checkpoint.ipynb
 ```
 
+### Find me
+
+LinkedIn : https://www.linkedin.com/in/shiva-gandluri-63016416b/
+Youtube : https://www.youtube.com/channel/UC_vlvekR9zdzK0nG2bXvkKQ
