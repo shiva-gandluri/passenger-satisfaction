@@ -6,8 +6,10 @@ Technologies Used: Machine Learning, Python
 Framework: Django
 Frontend: Html, CSS, JavaScript and JQuery 
 
-Machine Learning aspects of this project: [Medium blog](https://shiva1gandluri.medium.com/passenger-satisfaction-f213ec5cc9f7)
+Detailed explanation of Machine Learning aspects of this project: [Medium blog](https://shiva1gandluri.medium.com/passenger-satisfaction-f213ec5cc9f7)
 
+### Project Demo
+Click on the image below to go to the project demo.
 [![PASSENGER SATISFACTION - PROJECT DEMO](static/images/Passenger_Satisfaction_Thumbnail.PNG)](https://www.youtube.com/watch?v=4v2mJSBRhnY)
 
 ### Table of Contents
@@ -41,7 +43,7 @@ Machine Learning aspects of this project: [Medium blog](https://shiva1gandluri.m
 Within the download you'll find the following directories and files:
 
 ```
-black-dashboard-angular
+passenger-satisfaction
 ├── .vscode
 │   └── settings.json
 ├── feedback
