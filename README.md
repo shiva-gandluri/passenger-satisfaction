@@ -6,9 +6,9 @@ Technologies Used: Machine Learning, Python
 Framework: Django
 Frontend: Html, CSS, JavaScript and JQuery 
 
-Link to the medium blog: [link](https://shiva1gandluri.medium.com/passenger-satisfaction-f213ec5cc9f7)
+Machine Learning aspects of this project: [Medium blog](https://shiva1gandluri.medium.com/passenger-satisfaction-f213ec5cc9f7)
 
-[![PASSENGER SATISFACTION - PROJECT DEMO](https://img.youtube.com/vi/4v2mJSBRhnY)](https://www.youtube.com/watch?v=4v2mJSBRhnY)
+[![PASSENGER SATISFACTION - PROJECT DEMO](static/images/Passenger_Satisfaction_Thumbnail.PNG)](https://www.youtube.com/watch?v=4v2mJSBRhnY)
 
 ### Table of Contents
 
@@ -63,7 +63,7 @@ black-dashboard-angular
 │   └── views.py
 ├── ml_model
 │   ├── __pycache__
-│   │   ├── py_functions.cpython-36.pyc
+│   │   └── py_functions.cpython-36.pyc
 │   ├── finalized_model_satisfaction.sav
 │   ├── model.py
 │   ├── py_functions.py
@@ -81,8 +81,14 @@ black-dashboard-angular
 │   └── wsgi.py
 ├── static
 │   ├── fonts
+│   │   └── Mallanna.css
 │   ├── gifs
+│   │   ├── sorry_milk.gif
+│   │   └── thankyou_milk.gif
 │   ├── images
+│   │   ├── Passenger_Satisfaction_Thumbnail.PNG
+│   │   ├── aeroplane_1.jpg
+│   │   └── aeroplane_8.jpg
 │   ├── bootstrap_4.css
 │   ├── bootstrap_edited.css
 │   └── styles.css
