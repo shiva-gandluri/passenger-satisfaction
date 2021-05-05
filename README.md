@@ -100,7 +100,7 @@ passenger-satisfaction
 ├── templates
 │   ├── feedback
 │   │   └── index.html
-│   ├── fonts.css
+│   └── fonts.css
 ├── README.md
 ├── finalized_model_satisfaction.sav
 ├── manage.py
