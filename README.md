@@ -58,7 +58,7 @@ passenger-satisfaction
 │   │   └── views.cpython-36.pyc
 │   ├── migrations
 │   │   ├── __pycache__
-│   │   │   ├── __init__.cpython-36.pyc
+│   │   │   └── __init__.cpython-36.pyc
 │   │   └── __init__.py 
 │   ├── __init__.py
 │   ├── admin.py
