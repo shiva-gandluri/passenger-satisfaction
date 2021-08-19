@@ -52,7 +52,7 @@ over the machine learning model for this problem. I learned how to deploy a mach
    <li>Ensemble Vote Classifier</li>
  </ul>
  
- <h6> Conclusions: </h6>
+ <h3> Conclusions: </h3>
 <ul>
 <li>Although Random Forest Classifier took lesser time, XGBoost model gave the best performance of 96.04% accuracy.</li>
 <li>Feature Engineering was one of the most important steps while solving this problem, on performing which the accuracy increased from 94% to 96%.</li>
